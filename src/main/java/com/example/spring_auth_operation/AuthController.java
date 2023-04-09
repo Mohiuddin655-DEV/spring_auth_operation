@@ -28,14 +28,14 @@ public class AuthController {
         return principal;
     }
 
-    @GetMapping("/logout")
-    public void logout(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws ServletException {
-        request.logout();
-        response.reset();
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        SecurityContextHolder.getContext().setAuthentication(null);
-    }
+//    @GetMapping("/logout")
+//    public void logout(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws ServletException {
+//        request.logout();
+//        response.reset();
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if (auth != null) {
+//            new SecurityContextLogoutHandler().logout(request, response, auth);
+//        }
+//        SecurityContextHolder.getContext().setAuthentication(null);
+//    }
 }
